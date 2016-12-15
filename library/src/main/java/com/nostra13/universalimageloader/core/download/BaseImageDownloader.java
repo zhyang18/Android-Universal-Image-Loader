@@ -160,6 +160,7 @@ public class BaseImageDownloader implements ImageDownloader {
 		HttpURLConnection conn = (HttpURLConnection) new URL(encodedUrl).openConnection();
 		conn.setConnectTimeout(connectTimeout);
 		conn.setReadTimeout(readTimeout);
+		conn.setRequestProperty("Referer", "http://doctor.terrydr.com");  
 		return conn;
 	}
 
